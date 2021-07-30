@@ -32,12 +32,14 @@ public class LinkedLists {
             System.out.println(color.next());
         }
 
+	//Iterating Through List in Reverse
         System.out.println("\nIterating through List in Reverse:");
         Iterator<String> reverse = colors.descendingIterator();
         while(reverse.hasNext()){
             System.out.println(reverse.next());
         }
 
+	//Adding Color in Specific Location
         colors.add(4, "Teal");
         System.out.println("\nAdding Element at Specified Location (Index 4): \n" + colors);
 
