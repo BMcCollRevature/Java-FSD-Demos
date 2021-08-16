@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body{
+    background-color: rgb(195, 252, 244);
+    margin-left: 100px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+.wrapper{
+    width: 1000px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 0 auto;
+}
+img{
+    width:150px;
+    height: 200px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(66, 173, 159, 0.767));
+    filter: drop-shadow(5px 5px 5px rgba(66, 173, 159, 0.767))
+
+}

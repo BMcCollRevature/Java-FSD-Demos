@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style1.css">
+    <style>
+        .wrapper{
+            width: 380px;
+            margin-top: 100px;
+            border-radius: 7px;
+            box-shadow: 5px 10px rgb(99, 65, 126);
+        }
+        input[type="text"],input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            border: 1px solid rgb(144, 92, 204);
+        }
+        .btn{
+            background-color: rgb(84, 66, 250);
+            color: rgb(255, 255, 255);
+            padding: 5px 30px;
+            text-transform: capitalize;
+            font-family:'Oswald', sans-serif ;
+            border: 0px;
+            border-radius: 4px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Registration Form</h1>
+
+        <form name="userForm" method = "post" onsubmit = "onSubmit(event)" action="">
+            <div>
+                <label for="">Username</label>
+                <input type="text" name="username" id="name" placeholder="John" required>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="text" name="" id="email" placeholder="j@gmail.com" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="text" name="" id="password" onchange='check_pass();' required >
+            </div>
+            <div>
+                <label for="">Confirm Password</label>
+                <input type="text" name="" id="cpassword" onchange='check_pass();' required>
+            </div>
+            <div>
+                <input type="submit" class="btn" id = "submit" disabled onclick="formValidation()">
+            </div>    
+        </form>
+    </div>
+    <script>
+
+        function check_pass(){
+            if(document.getElementById('password').value == document.getElementById('cpassword').value){
+                document.getElementById('submit').disabled = false;
+            }else{
+                document.getElementById('submit').disabled = true;
+                alert('Passwords do not match')
+            }
+        }
+        function onSubmit(event){
+            event.preventDefault()
+
+            var name = document.userForm.username.value;
+            var email = document.userForm.email.value;
+            var password = document.userForm.password.value;
+            var cpassword = document.userForm.cpassword.value;
+
+            if(name ==null || name == ""){
+                alert('This is required')
+            }else if(email ==null || email ==""){
+                alert('This is required')
+            } else if(password ==null || password ==""){
+                alert('This is required')
+            } else if(cpassword ==null || cpassword ==""){
+                alert('This is required')
+            }
+        }
+    </script>
+</body>
+</html>
