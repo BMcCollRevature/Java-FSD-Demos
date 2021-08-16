@@ -47,14 +47,14 @@
             </div>
             <div>
                 <label for="">Password</label>
-                <input type="text" name="" id="password" onchange='check_pass();' required >
+                <input type="password" name="" id="password" onchange='check_pass();' required >
             </div>
             <div>
                 <label for="">Confirm Password</label>
-                <input type="text" name="" id="cpassword" onchange='check_pass();' required>
+                <input type="password" name="" id="cpassword" onchange='check_pass();' required>
             </div>
             <div>
-                <input type="submit" class="btn" id = "submit" disabled onclick="formValidation()">
+                <button type="submit" class="btn" id = "submit" disabled onclick="formValidation()">Register</button>
             </div>    
         </form>
     </div>
@@ -84,6 +84,8 @@
                 alert('This is required')
             } else if(cpassword ==null || cpassword ==""){
                 alert('This is required')
+            }else{
+                alert('Registration Successful')
             }
         }
     </script>
